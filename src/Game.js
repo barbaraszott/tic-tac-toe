@@ -11,6 +11,19 @@ class Game extends React.Component {
 		};
 	}
 
+	//choose randomly first player
+	chooseFirstPlayer = () => {
+		const first = Math.round(Math.random()) === 0 ? 'x' : 'o';
+
+		this.setState({
+			player : first
+		});
+	};
+
+	componentDidMount = () => {
+		this.chooseFirstPlayer();
+	};
+
 	render() {
 		return (
 			<div className="game">
