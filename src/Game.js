@@ -20,6 +20,14 @@ class Game extends React.Component {
 		});
 	};
 
+	nextPlayer = () => {
+		const next = this.state.player === 'x' ? 'o' : 'x';
+
+		this.setState({
+			player : next
+		});
+	};
+
 	componentDidMount = () => {
 		this.chooseFirstPlayer();
 	};
