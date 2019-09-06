@@ -3,19 +3,7 @@ import PropTypes from 'prop-types';
 import './Game.scss';
 
 class Square extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			checkedBy : null
-		};
-	}
-
 	handleClick = () => {
-		if (this.props.isFinished || this.state.checkedBy !== null) return;
-
-		this.setState({
-			checkedBy : this.props.player
-		});
 
 		this.props.onClick(this.props.id);
 	};
@@ -23,7 +11,6 @@ class Square extends Component {
 	render() {
 		return (
 			<div className="square" onClick={this.handleClick} style={this.props.style}>
-				{this.state.checkedBy}
 			</div>
 		);
 	}
