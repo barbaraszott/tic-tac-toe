@@ -1,6 +1,7 @@
 import React from 'react';
 import './Game.scss';
 import Board from './Board';
+import lines from './lines';
 
 class Game extends React.Component {
 	constructor(props) {
