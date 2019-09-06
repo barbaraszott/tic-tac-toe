@@ -53,7 +53,9 @@ class Game extends React.Component {
 	};
 
 	componentDidMount = () => {
-		this.chooseFirstPlayer();
+		this.setState({
+			player : this.chooseFirstPlayer()
+		});
 	};
 
 	resetGame = () => {
