@@ -16,13 +16,7 @@ class Game extends React.Component {
 	}
 
 	//choose randomly first player
-	chooseFirstPlayer = () => {
-		const first = Math.round(Math.random()) === 0 ? 'x' : 'o';
-
-		this.setState({
-			player : first
-		});
-	};
+	chooseFirstPlayer = () => (Math.round(Math.random()) === 0 ? 'x' : 'o');
 
 	nextPlayer = () => {
 		const next = this.state.player === 'x' ? 'o' : 'x';
