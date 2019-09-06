@@ -22,7 +22,7 @@ class Square extends Component {
 
 	render() {
 		return (
-			<div className="square" onClick={this.handleClick}>
+			<div className="square" onClick={this.handleClick} style={this.props.style}>
 				{this.state.checkedBy}
 			</div>
 		);
@@ -30,12 +30,24 @@ class Square extends Component {
 }
 
 class Board extends Component {
-	renderSquare = (i) => (
-		<Square id={i} onClick={this.props.onSquareClick} player={this.props.player} isFinished={this.props.isFinished} />
-	);
+	renderSquare = (i) => {
+		let boxWinStyle;
+		if (this.props.isFinished && this.props.winningLine.includes(i)) {
+			boxWinStyle = { backgroundColor: 'yellow' };
+		}
+		return (
+			<Square
+				id={i}
+				onClick={this.props.onSquareClick}
+				player={this.props.player}
+				isFinished={this.props.isFinished}
+				style={boxWinStyle}
+			/>
+		);
+	};
 
 	render() {
-		const player = this.props.player;
+		// const player = this.props.player;
 		return (
 			<React.Fragment>
 				<div className="board-row">
