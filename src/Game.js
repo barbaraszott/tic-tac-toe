@@ -79,7 +79,11 @@ class Game extends React.Component {
 		return (
 			<div className="game">
 				<h1>Tic Tac Toe</h1>
-				{!this.state.isFinished ? <h2>Current Player: {this.state.player}</h2> : <h2>Winner: {this.state.winner}</h2>}
+
+				{/* TODO: refactor */}
+				{!this.state.isFinished && <h2>Current Player: {this.state.player}</h2>}
+				{this.state.isFinished && this.state.winner && <h2>Winner: {this.state.winner}</h2>}
+				{this.state.isFinished && !this.state.winner && <h2>Draw!</h2>}
 
 				<div className="game-board">
 					<Board
