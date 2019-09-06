@@ -30,9 +30,12 @@ class Square extends Component {
 }
 
 class Board extends Component {
-	renderSquare = (i) => <Square key={i} />;
+	renderSquare = (i) => (
+		<Square id={i} onClick={this.props.onSquareClick} player={this.props.player} isFinished={this.props.isFinished} />
+	);
 
 	render() {
+		const player = this.props.player;
 		return (
 			<React.Fragment>
 				<div className="board-row">
