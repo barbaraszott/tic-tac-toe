@@ -7,10 +7,11 @@ class Game extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			moves      : { x: [], o: [] },
-			player     : null,
-			isFinished : false,
-			winner     : null
+			moves       : { x: [], o: [] },
+			player      : null,
+			isFinished  : false,
+			winner      : null,
+			winningLine : null
 		};
 	}
 
@@ -37,8 +38,9 @@ class Game extends React.Component {
 			lines.forEach((line) => {
 				if (line.every((box) => moves[player].includes(box))) {
 					this.setState({
-						isFinished : true,
-						winner     : this.state.player
+						isFinished  : true,
+						winner      : this.state.player,
+						winningLine : line
 					});
 					return;
 				}
