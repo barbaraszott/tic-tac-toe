@@ -18,11 +18,7 @@ class Game extends React.Component {
 	//choose randomly first player
 	chooseFirstPlayer = () => (Math.round(Math.random()) === 0 ? 'x' : 'o');
 
-	nextPlayer = () => {
-		const next = this.state.player === 'x' ? 'o' : 'x';
-
-		return next;
-	};
+	nextPlayer = () => (this.state.player === 'x' ? 'o' : 'x');
 
 	makeMove = (checkedBox) => {
 		const currentPlayer = this.state.player;

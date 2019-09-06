@@ -21,6 +21,7 @@ class Square extends Component {
 class Board extends Component {
 	renderSquare = (i) => {
 		let boxWinStyle;
+
 		if (this.props.isFinished && this.props.winner && this.props.winningLine.includes(i)) {
 			boxWinStyle = { backgroundColor: 'yellow' };
 		}
