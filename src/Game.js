@@ -62,6 +62,19 @@ class Game extends React.Component {
 		this.chooseFirstPlayer();
 	};
 
+	resetGame = () => {
+		this.setState({
+			moves       : {},
+			// player      : null,
+			isFinished  : false,
+			winner      : null,
+			winningLine : null
+		});
+
+		//TODO: change this so on componentDidMount setState is run only once
+		this.chooseFirstPlayer();
+	};
+
 	render() {
 		return (
 			<div className="game">
@@ -76,6 +89,9 @@ class Game extends React.Component {
 						winningLine={this.state.winningLine}
 					/>
 				</div>
+				<button className="reset" onClick={this.resetGame}>
+					Play again!
+				</button>
 			</div>
 		);
 	}
