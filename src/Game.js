@@ -28,6 +28,29 @@ class Game extends React.Component {
 
 		return next;
 	};
+
+	makeMove = (checkedBox) => {
+		const { player, moves } = this.state;
+		moves[player].push(checkedBox);
+
+		if (moves[player].length >= 3) {
+			lines.forEach((line) => {
+				if (line.every((box) => moves[player].includes(box))) {
+					this.setState({
+						isFinished : true,
+						winner     : this.state.player
+					});
+					return;
+				}
+			});
+		}
+
+		if (!this.state.isFinished) {
+			this.setState({
+				moves,
+				player : this.nextPlayer()
+			});
+		}
 	};
 
 	componentDidMount = () => {
