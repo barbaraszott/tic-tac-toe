@@ -27,6 +27,7 @@ class Game extends React.Component {
 			moves : { ...this.state.moves, [checkedBox]: currentPlayer }
 		};
 
+		// Check if current player is the winner
 		lines.forEach((line) => {
 			if (line.every((box) => newState.moves[box] === currentPlayer)) {
 				newState.isFinished = true;
@@ -35,6 +36,7 @@ class Game extends React.Component {
 			}
 		});
 
+		// If there is no winner and there already have been 9 moves - end game (draw)
 		if (Object.keys(newState.moves).length === 9) {
 			newState.isFinished = true;
 		}
