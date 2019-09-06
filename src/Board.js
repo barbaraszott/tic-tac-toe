@@ -31,7 +31,6 @@ class Board extends Component {
 			<Square
 				id={i}
 				onClick={this.props.onSquareClick}
-				player={this.props.player}
 				isFinished={this.props.isFinished}
 				style={boxWinStyle}
 				value={value}
@@ -40,7 +39,6 @@ class Board extends Component {
 	};
 
 	render() {
-		// const player = this.props.player;
 		return (
 			<React.Fragment>
 				<div className="board-row">
@@ -65,7 +63,6 @@ class Board extends Component {
 
 Board.propTypes = {
 	onSquareClick : PropTypes.func,
-	player        : PropTypes.string,
 	isFinished    : PropTypes.bool,
 	winningLine   : PropTypes.array,
 	moves         : PropTypes.object,
