@@ -90,7 +90,9 @@ class Game extends React.Component {
 						onSquareClick={this.makeMove}
 						player={this.state.player}
 						isFinished={this.state.isFinished}
+						winner={this.state.winner}
 						winningLine={this.state.winningLine}
+						moves={this.state.moves}
 					/>
 				</div>
 				<button className="reset" onClick={this.resetGame}>
