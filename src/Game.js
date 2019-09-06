@@ -61,14 +61,11 @@ class Game extends React.Component {
 	resetGame = () => {
 		this.setState({
 			moves       : {},
-			// player      : null,
+			player      : this.chooseFirstPlayer(),
 			isFinished  : false,
 			winner      : null,
 			winningLine : null
 		});
-
-		//TODO: change this so on componentDidMount setState is run only once
-		this.chooseFirstPlayer();
 	};
 
 	render() {
