@@ -66,7 +66,12 @@ class Game extends React.Component {
 				{!this.state.isFinished ? <h2>Current Player: {this.state.player}</h2> : <h2>Winner: {this.state.winner}</h2>}
 
 				<div className="game-board">
-					<Board onSquareClick={this.makeMove} player={this.state.player} isFinished={this.state.isFinished} />
+					<Board
+						onSquareClick={this.makeMove}
+						player={this.state.player}
+						isFinished={this.state.isFinished}
+						winningLine={this.state.winningLine}
+					/>
 				</div>
 			</div>
 		);
