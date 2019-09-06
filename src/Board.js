@@ -58,6 +58,11 @@ class Board extends Component {
 	}
 }
 
-Board.propTypes = {};
+Board.propTypes = {
+	onSquareClick : PropTypes.func,
+	player        : PropTypes.string,
+	isFinished    : PropTypes.bool,
+	winningLine   : PropTypes.array
+};
 
 export default Board;
