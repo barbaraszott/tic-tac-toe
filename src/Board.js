@@ -24,6 +24,9 @@ class Board extends Component {
 		if (this.props.isFinished && this.props.winner && this.props.winningLine.includes(i)) {
 			boxWinStyle = { backgroundColor: 'yellow' };
 		}
+
+		const value = this.props.moves[i];
+
 		return (
 			<Square
 				id={i}
@@ -31,6 +34,7 @@ class Board extends Component {
 				player={this.props.player}
 				isFinished={this.props.isFinished}
 				style={boxWinStyle}
+				value={value}
 			/>
 		);
 	};
