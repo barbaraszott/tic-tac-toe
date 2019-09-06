@@ -4,6 +4,7 @@ import './Game.scss';
 
 class Square extends Component {
 	handleClick = () => {
+		if (this.props.isFinished || this.props.value) return;
 
 		this.props.onClick(this.props.id);
 	};
