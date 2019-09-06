@@ -12,6 +12,7 @@ class Square extends Component {
 	render() {
 		return (
 			<div className="square" onClick={this.handleClick} style={this.props.style}>
+				{this.props.value}
 			</div>
 		);
 	}
