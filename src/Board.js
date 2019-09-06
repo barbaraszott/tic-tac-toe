@@ -67,7 +67,9 @@ Board.propTypes = {
 	onSquareClick : PropTypes.func,
 	player        : PropTypes.string,
 	isFinished    : PropTypes.bool,
-	winningLine   : PropTypes.array
+	winningLine   : PropTypes.array,
+	moves         : PropTypes.object,
+	winner        : PropTypes.string
 };
 
 export default Board;
