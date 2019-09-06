@@ -2,8 +2,31 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './Game.scss';
 
-function Square() {
-	return <div className="square">{/* TO DO */}</div>;
+class Square extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			checkedBy : null
+		};
+	}
+
+	handleClick = () => {
+		if (this.props.isFinished || this.state.checkedBy !== null) return;
+
+		this.setState({
+			checkedBy : this.props.player
+		});
+
+		this.props.onClick(this.props.id);
+	};
+
+	render() {
+		return (
+			<div className="square" onClick={this.handleClick}>
+				{this.state.checkedBy}
+			</div>
+		);
+	}
 }
 
 class Board extends Component {
