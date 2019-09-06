@@ -7,9 +7,10 @@ class Game extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			game       : new Array(9).fill(null),
+			moves      : { x: [], o: [] },
 			player     : null,
-			isFinished : false
+			isFinished : false,
+			winner     : null
 		};
 	}
 
