@@ -1,22 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './Game.scss';
-
-class Square extends Component {
-	handleClick = () => {
-		if (this.props.isFinished || this.props.value) return;
-
-		this.props.onClick(this.props.id);
-	};
-
-	render() {
-		return (
-			<div className="square" onClick={this.handleClick} style={this.props.style}>
-				{this.props.value}
-			</div>
-		);
-	}
-}
+import Square from './Square';
 
 class Board extends Component {
 	renderSquare = (i) => {
