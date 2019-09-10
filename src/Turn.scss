@@ -1,0 +1,44 @@
+.turn {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+	width: 100px;
+	height: 50px;
+	background-color: #fff;
+	border: 2px solid #f4f6f6;
+	border-radius: 50px;
+
+	&-icon {
+		width: calc(50% - 4px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 1;
+		transition: ease-in 0.4s;
+		color: #3a86c9;
+
+		&.is-active {
+			color: #fff;
+		}
+	}
+
+	&-toggle {
+		height: 46px;
+		width: 46px;
+		position: absolute;
+		top: 0;
+		background-color: #39bcd4;
+		border-radius: 50%;
+		transition: ease-out 0.4s;
+
+		&.toggle-x {
+			left: 0;
+		}
+
+		&.toggle-o {
+			left: 50px;
+		}
+	}
+}
