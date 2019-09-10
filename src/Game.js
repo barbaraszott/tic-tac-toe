@@ -76,8 +76,6 @@ class Game extends React.Component {
 
 				{this.state.isFinished ? <Result winner={this.state.winner} /> : <Turn player={this.state.player} />}
 
-				<button className="reset" onClick={this.resetGame}>
-					Play again!
 				<Board
 					onSquareClick={this.makeMove}
 					isFinished={this.state.isFinished}
@@ -86,6 +84,8 @@ class Game extends React.Component {
 					moves={this.state.moves}
 				/>
 
+				<button className={`game-reset ${!this.state.isFinished ? 'reset-disabled' : ''}`} onClick={this.resetGame}>
+					Play again
 				</button>
 			</div>
 		);
