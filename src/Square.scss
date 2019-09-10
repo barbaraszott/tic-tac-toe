@@ -19,4 +19,8 @@
 .square-icon {
 	height: 70px;
 	width: 70px;
+	&.icon-o {
+		border: 10px solid #39bdd7;
+		border-radius: 100%;
+	}
 }
