@@ -2,6 +2,8 @@ import React from 'react';
 import './Game.scss';
 import Board from './Board';
 import lines from './lines';
+import Turn from './Turn';
+import Result from './Result';
 
 class Game extends React.Component {
 	constructor(props) {
@@ -72,10 +74,7 @@ class Game extends React.Component {
 			<div className="game">
 				<h1>Tic Tac Toe</h1>
 
-				{/* TODO: refactor */}
-				{!this.state.isFinished && <h2>Current Player: {this.state.player}</h2>}
-				{this.state.isFinished && this.state.winner && <h2>Winner: {this.state.winner}</h2>}
-				{this.state.isFinished && !this.state.winner && <h2>Draw!</h2>}
+				{this.state.isFinished ? <Result winner={this.state.winner} /> : <Turn player={this.state.player} />}
 
 				<div className="game-board">
 					<Board
