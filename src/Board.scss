@@ -1,0 +1,12 @@
+.board {
+	margin: 50px 20px;
+}
+
+.board-row {
+	display: flex;
+
+	&:nth-child(even) {
+		border-top: 2px solid #d6e6ea;
+		border-bottom: 2px solid #d6e6ea;
+	}
+}
