@@ -19,8 +19,34 @@
 .square-icon {
 	height: 70px;
 	width: 70px;
+
 	&.icon-o {
 		border: 10px solid #39bdd7;
 		border-radius: 100%;
+	}
+
+	&.icon-x {
+		position: relative;
+		color: #d9dcdf;
+		transform: translateX(calc(50% - 5px));
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			height: inherit;
+			width: 10px;
+			background-color: #3e89cf;
+			border-radius: 15px;
+		}
+
+		&::before {
+			transform: rotate(-45deg);
+		}
+
+		&::after {
+			transform: rotate(45deg);
+		}
 	}
 }
