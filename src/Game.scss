@@ -1,6 +1,4 @@
-* {
-	box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
 
 @mixin flex-center {
 	display: flex;
@@ -10,26 +8,23 @@
 
 body {
 	@include flex-center();
+	height: 100vh;
+	margin: 0;
+	background-color: #fdfdff;
+	font-family: 'Fredoka One', cursive;
+	color: #4d6787;
 }
 
-h1,
-h2 {
+h1 {
+	margin: 50px 0;
 	text-align: center;
+	font-size: 45px;
 }
 
-.game-board {
-	@include flex-center();
+.game {
+	@include flex-center;
 	flex-direction: column;
 }
 
-.board-row {
-	display: flex;
-}
-
-.square {
-	@include flex-center();
-	width: 50px;
-	height: 50px;
-	border: 1px solid grey;
 	cursor: pointer;
 }
