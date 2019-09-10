@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './Game.scss';
 import Square from './Square';
+import './Board.scss';
 
 class Board extends Component {
 	renderSquare = (i) => {
 		let boxWinStyle;
 
 		if (this.props.isFinished && this.props.winner && this.props.winningLine.includes(i)) {
-			boxWinStyle = { backgroundColor: 'yellow' };
+			boxWinStyle = { backgroundColor: '#e7fdff' };
 		}
 
 		const value = this.props.moves[i];
@@ -26,7 +27,7 @@ class Board extends Component {
 
 	render() {
 		return (
-			<React.Fragment>
+			<div className="board">
 				<div className="board-row">
 					{this.renderSquare(0)}
 					{this.renderSquare(1)}
@@ -42,7 +43,7 @@ class Board extends Component {
 					{this.renderSquare(7)}
 					{this.renderSquare(8)}
 				</div>
-			</React.Fragment>
+			</div>
 		);
 	}
 }
