@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Game.scss';
+import './Square.scss';
 
 class Square extends Component {
 	handleClick = () => {
@@ -10,9 +10,11 @@ class Square extends Component {
 	};
 
 	render() {
+		const icon = !this.props.value ? '' : this.props.value === 'x' ? 'icon-x' : 'icon-o';
+
 		return (
 			<div className="square" onClick={this.handleClick} style={this.props.style}>
-				{this.props.value}
+				<div className={`square-icon ${icon}`} />
 			</div>
 		);
 	}
