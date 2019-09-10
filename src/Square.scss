@@ -19,16 +19,20 @@
 .square-icon {
 	height: 70px;
 	width: 70px;
+	transition: 500ms;
+	opacity: 0;
 
 	&.icon-o {
 		border: 10px solid #39bdd7;
 		border-radius: 100%;
+		opacity: 1;
 	}
 
 	&.icon-x {
 		position: relative;
 		color: #d9dcdf;
 		transform: translateX(calc(50% - 5px));
+		opacity: 1;
 
 		&::before,
 		&::after {
