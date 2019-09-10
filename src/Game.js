@@ -76,17 +76,16 @@ class Game extends React.Component {
 
 				{this.state.isFinished ? <Result winner={this.state.winner} /> : <Turn player={this.state.player} />}
 
-				<div className="game-board">
-					<Board
-						onSquareClick={this.makeMove}
-						isFinished={this.state.isFinished}
-						winner={this.state.winner}
-						winningLine={this.state.winningLine}
-						moves={this.state.moves}
-					/>
-				</div>
 				<button className="reset" onClick={this.resetGame}>
 					Play again!
+				<Board
+					onSquareClick={this.makeMove}
+					isFinished={this.state.isFinished}
+					winner={this.state.winner}
+					winningLine={this.state.winningLine}
+					moves={this.state.moves}
+				/>
+
 				</button>
 			</div>
 		);
