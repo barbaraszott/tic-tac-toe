@@ -1,0 +1,11 @@
+.square {
+	width: 90px;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	&:hover {
+		background-color: #ecfcfc;
+	}
+}
