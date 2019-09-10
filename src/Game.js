@@ -36,8 +36,9 @@ class Game extends React.Component {
 			}
 		});
 
-		// If there is no winner and there already have been 9 moves - end game (draw)
-		if (Object.keys(newState.moves).length === 9) {
+		// If there is no winner and there already have been 9 moves - draw (game is finished with no winner)
+		const isDraw = Object.keys(newState.moves).length === 9;
+		if (isDraw) {
 			newState.isFinished = true;
 		}
 
