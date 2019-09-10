@@ -26,5 +26,20 @@ h1 {
 	flex-direction: column;
 }
 
+.game-reset {
+	padding: 20px;
+	background-color: #fefeff;
+	border: 2px solid #d6e6ea;
+	border-radius: 30px;
+	font-family: inherit;
+	font-size: 18px;
+	color: #91a2ab;
+	text-transform: uppercase;
 	cursor: pointer;
+	outline: transparent;
+
+	&.reset-disabled {
+		opacity: 0.4;
+		pointer-events: none;
+	}
 }
