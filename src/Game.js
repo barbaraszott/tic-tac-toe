@@ -73,9 +73,7 @@ class Game extends React.Component {
 		return (
 			<div className="game">
 				<h1>Tic Tac Toe</h1>
-
 				{this.state.isFinished ? <Result winner={this.state.winner} /> : <Turn player={this.state.player} />}
-
 				<Board
 					onSquareClick={this.makeMove}
 					isFinished={this.state.isFinished}
@@ -83,7 +81,6 @@ class Game extends React.Component {
 					winningLine={this.state.winningLine}
 					moves={this.state.moves}
 				/>
-
 				<button className={`game-reset ${!this.state.isFinished ? 'reset-disabled' : ''}`} onClick={this.resetGame}>
 					Play again
 				</button>

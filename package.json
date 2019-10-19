@@ -4,11 +4,14 @@
 	"private": true,
 	"homepage": "https://barbaraszott.github.io/tic-tac-toe",
 	"dependencies": {
+		"enzyme": "^3.10.0",
+		"enzyme-adapter-react-16": "^1.15.1",
 		"gh-pages": "^2.1.1",
 		"node-sass": "^4.12.0",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
-		"react-scripts": "3.1.1"
+		"react-scripts": "3.1.1",
+		"react-test-renderer": "^16.10.2"
 	},
 	"scripts": {
 		"start": "react-scripts start",
