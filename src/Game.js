@@ -10,7 +10,7 @@ class Game extends React.Component {
 		super(props);
 		this.state = {
 			moves       : {},
-			player      : null,
+			player      : this.chooseFirstPlayer(),
 			isFinished  : false,
 			winner      : null,
 			winningLine : null
@@ -50,12 +50,6 @@ class Game extends React.Component {
 			winner      : newState.winner,
 			winningLine : newState.winningLine,
 			player      : this.nextPlayer()
-		});
-	};
-
-	componentDidMount = () => {
-		this.setState({
-			player : this.chooseFirstPlayer()
 		});
 	};
 
