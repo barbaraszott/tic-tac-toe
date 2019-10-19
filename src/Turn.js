@@ -8,9 +8,13 @@ class Turn extends Component {
 
 		return (
 			<div className="turn">
-				<div className={`turn-icon ${player === 'x' ? 'is-active' : ''}`}>X</div>
-				<div className={`turn-icon ${player === 'o' ? 'is-active' : ''}`}>O</div>
-				<div className={`turn-toggle ${player === 'x' ? 'toggle-x' : 'toggle-o'}`} />
+				<div id="turn-icon-x" className={`turn-icon ${player === 'x' ? 'is-active' : ''}`}>
+					X
+				</div>
+				<div id="turn-icon-o" className={`turn-icon ${player === 'o' ? 'is-active' : ''}`}>
+					O
+				</div>
+				<div id="turn-toggle" className={`turn-toggle ${player === 'x' ? 'toggle-x' : 'toggle-o'}`} />
 			</div>
 		);
 	}
