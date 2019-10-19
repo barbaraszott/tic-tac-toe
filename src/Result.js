@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './Result.scss';
+import playerColors from './playerColors';
 
 class Result extends Component {
 	render() {
@@ -8,7 +9,7 @@ class Result extends Component {
 
 		if (!winner) return <p className="result">It's a draw!</p>;
 
-		const winnerColor = { color: winner === 'x' ? '#3e89cf' : '#39bdd7' };
+		const winnerColor = { color: winner === 'x' ? playerColors.x : playerColors.o };
 
 		return (
 			<p className="result">
