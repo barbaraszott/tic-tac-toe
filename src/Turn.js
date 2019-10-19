@@ -21,7 +21,10 @@ class Turn extends Component {
 }
 
 Turn.propTypes = {
-	player : PropTypes.string
+	player : PropTypes.oneOf([
+		'x',
+		'o'
+	]).isRequired
 };
 
 export default Turn;
