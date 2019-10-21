@@ -21,6 +21,11 @@
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build"
 	},
+	"jest": {
+		"snapshotSerializers": [
+			"enzyme-to-json/serializer"
+		]
+	},
 	"eslintConfig": {
 		"extends": "react-app"
 	},
@@ -35,5 +40,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"enzyme-to-json": "^3.4.3"
 	}
 }

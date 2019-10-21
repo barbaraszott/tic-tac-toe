@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="board"
+>
+  <div
+    className="board-row"
+  >
+    <div
+      className="square"
+      onClick={[Function]}
+    >
+      <div
+        className="square-icon "
+      />
+    </div>
+    <div
+      className="square"
+      onClick={[Function]}
+    >
+      <div
+        className="square-icon "
+      />
+    </div>
+    <div
+      className="square"
+      onClick={[Function]}
+    >
+      <div
+        className="square-icon "
+      />
+    </div>
+  </div>
+  <div
+    className="board-row"
+  >
+    <div
+      className="square"
+      onClick={[Function]}
+    >
+      <div
+        className="square-icon "
+      />
+    </div>
+    <div
+      className="square"
+      onClick={[Function]}
+    >
+      <div
+        className="square-icon "
+      />
+    </div>
+    <div
+      className="square"
+      onClick={[Function]}
+    >
+      <div
+        className="square-icon "
+      />
+    </div>
+  </div>
+  <div
+    className="board-row"
+  >
+    <div
+      className="square"
+      onClick={[Function]}
+    >
+      <div
+        className="square-icon "
+      />
+    </div>
+    <div
+      className="square"
+      onClick={[Function]}
+    >
+      <div
+        className="square-icon "
+      />
+    </div>
+    <div
+      className="square"
+      onClick={[Function]}
+    >
+      <div
+        className="square-icon "
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly winning line [0, 3, 6] 1`] = `
+<div
+  className="board"
+>
+  <div
+    className="board-row"
+  >
+    <Square
+      id={0}
+      isFinished={true}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e7fdff",
+        }
+      }
+    />
+    <Square
+      id={1}
+      isFinished={true}
+      onClick={[Function]}
+    />
+    <Square
+      id={2}
+      isFinished={true}
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="board-row"
+  >
+    <Square
+      id={3}
+      isFinished={true}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e7fdff",
+        }
+      }
+    />
+    <Square
+      id={4}
+      isFinished={true}
+      onClick={[Function]}
+    />
+    <Square
+      id={5}
+      isFinished={true}
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="board-row"
+  >
+    <Square
+      id={6}
+      isFinished={true}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e7fdff",
+        }
+      }
+    />
+    <Square
+      id={7}
+      isFinished={true}
+      onClick={[Function]}
+    />
+    <Square
+      id={8}
+      isFinished={true}
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`should not pass style to squares if there is no winner 1`] = `
+<div
+  className="board"
+>
+  <div
+    className="board-row"
+  >
+    <Square
+      id={0}
+      isFinished={true}
+      onClick={[Function]}
+    />
+    <Square
+      id={1}
+      isFinished={true}
+      onClick={[Function]}
+    />
+    <Square
+      id={2}
+      isFinished={true}
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="board-row"
+  >
+    <Square
+      id={3}
+      isFinished={true}
+      onClick={[Function]}
+    />
+    <Square
+      id={4}
+      isFinished={true}
+      onClick={[Function]}
+    />
+    <Square
+      id={5}
+      isFinished={true}
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="board-row"
+  >
+    <Square
+      id={6}
+      isFinished={true}
+      onClick={[Function]}
+    />
+    <Square
+      id={7}
+      isFinished={true}
+      onClick={[Function]}
+    />
+    <Square
+      id={8}
+      isFinished={true}
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
