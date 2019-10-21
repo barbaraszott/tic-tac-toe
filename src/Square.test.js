@@ -46,7 +46,7 @@ it('should not fire onClick from props after clicking on square if game is finis
 	expect(mockOnClick).not.toHaveBeenCalled();
 });
 
-it('should not fire onClick from props after clicking on square if square has value', () => {
+it('should not fire onClick from props after clicking on square if square already has value', () => {
 	const mockOnClick = jest.fn();
 	const wrapper = shallow(<Square {...defaultProps} value="x" onClick={mockOnClick} />);
 
